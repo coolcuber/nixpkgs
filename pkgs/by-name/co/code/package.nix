@@ -62,10 +62,12 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/just-every/code";
     downloadPage = "https://github.com/just-every/code/releases";
     changelog = "https://github.com/just-every/code/releases/tag/${finalAttrs.src.tag}";
-    license = with lib.licenses; [
-      asl20
-      mit
-    ];
+    license =
+      with lib.licenses;
+      OR [
+        asl20
+        mit
+      ];
     maintainers = with lib.maintainers; [ prince213 ];
     mainProgram = "coder";
     priority = 10;
