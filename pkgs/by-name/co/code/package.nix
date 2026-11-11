@@ -2,6 +2,7 @@
   fetchFromGitHub,
   lib,
   nix-update-script,
+  onigurama,
   openssl,
   pkg-config,
   rustPlatform,
@@ -29,6 +30,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   buildInputs = lib.optionals stdenvNoCC.hostPlatform.isLinux [
+    onigurama
     openssl
   ];
 
