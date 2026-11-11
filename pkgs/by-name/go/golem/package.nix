@@ -8,6 +8,7 @@
   # nativeBuildInputs
   pkg-config,
   protobuf,
+  zstd,
 
   # buildInputs
   fontconfig,
@@ -53,6 +54,7 @@ rustPlatform.buildRustPackage rec {
   buildInputs = [
     fontconfig
     (lib.getDev openssl)
+    (lib.getDev zstd)
   ];
 
   cargoHash = "sha256-MmMaeRA+4W78UBtj0G3UW2IgLJW1R5FrrvyGqU/YoCc=";
